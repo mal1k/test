@@ -17,4 +17,4 @@ name: Deploy
        - run: echo "${{ secrets.key }}" > "$HOME/.ssh/key"
        - run: chmod 600 "$HOME/.ssh/key"
        # Deploy
-       - run: rsync -e "ssh -p 20022 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . root@46.41.139.184:/var/www/www-root/data/www/test.ebrio.group
+       - run: rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . root@46.41.139.184:/var/www/www-root/data/www/test.ebrio.group
