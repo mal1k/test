@@ -1,0 +1,8 @@
+# #! /bin/sh
+
+# Checkout
+git --work-tree=/var/www/www-root/data/test.ebrio.group --git-dir=/var/www/www-root/data/test.ebrio.group/deploy-test.git checkout -f
+
+# Install depedencies
+cd /var/www/www-root/data/test.ebrio.group
+npm run dev
